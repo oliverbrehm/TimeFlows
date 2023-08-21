@@ -34,13 +34,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BB073D332A619FFB0042C314 /* TimeFlows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeFlows.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB073D332A619FFB0042C314 /* SimpleTimeFlows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTimeFlows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB073D362A619FFB0042C314 /* TimeFlowsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFlowsApp.swift; sourceTree = "<group>"; };
 		BB073D382A619FFB0042C314 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		BB073D3A2A619FFB0042C314 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB073D3C2A619FFB0042C314 /* TimeFlows.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimeFlows.entitlements; sourceTree = "<group>"; };
 		BB073D3E2A619FFB0042C314 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BB073D442A619FFC0042C314 /* TimeFlowsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeFlowsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB073D442A619FFC0042C314 /* SimpleTimeFlowsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTimeFlowsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB073D482A619FFC0042C314 /* TimeFlowsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFlowsTests.swift; sourceTree = "<group>"; };
 		BB073D622A61A0510042C314 /* TimeFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFlow.swift; sourceTree = "<group>"; };
 		BB073D642A61A07A0042C314 /* TimeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeItem.swift; sourceTree = "<group>"; };
@@ -84,8 +84,8 @@
 		BB073D342A619FFB0042C314 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB073D332A619FFB0042C314 /* TimeFlows.app */,
-				BB073D442A619FFC0042C314 /* TimeFlowsTests.xctest */,
+				BB073D332A619FFB0042C314 /* SimpleTimeFlows.app */,
+				BB073D442A619FFC0042C314 /* SimpleTimeFlowsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,9 +167,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BB073D322A619FFB0042C314 /* TimeFlows */ = {
+		BB073D322A619FFB0042C314 /* SimpleTimeFlows */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB073D582A619FFC0042C314 /* Build configuration list for PBXNativeTarget "TimeFlows" */;
+			buildConfigurationList = BB073D582A619FFC0042C314 /* Build configuration list for PBXNativeTarget "SimpleTimeFlows" */;
 			buildPhases = (
 				BB073D2F2A619FFB0042C314 /* Sources */,
 				BB073D302A619FFB0042C314 /* Frameworks */,
@@ -179,17 +179,17 @@
 			);
 			dependencies = (
 			);
-			name = TimeFlows;
+			name = SimpleTimeFlows;
 			packageProductDependencies = (
 				BB847E222A798FE2002A9994 /* CSVData */,
 			);
 			productName = TimeFlows;
-			productReference = BB073D332A619FFB0042C314 /* TimeFlows.app */;
+			productReference = BB073D332A619FFB0042C314 /* SimpleTimeFlows.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BB073D432A619FFC0042C314 /* TimeFlowsTests */ = {
+		BB073D432A619FFC0042C314 /* SimpleTimeFlowsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB073D5B2A619FFC0042C314 /* Build configuration list for PBXNativeTarget "TimeFlowsTests" */;
+			buildConfigurationList = BB073D5B2A619FFC0042C314 /* Build configuration list for PBXNativeTarget "SimpleTimeFlowsTests" */;
 			buildPhases = (
 				BB073D402A619FFC0042C314 /* Sources */,
 				BB073D412A619FFC0042C314 /* Frameworks */,
@@ -200,12 +200,12 @@
 			dependencies = (
 				BB073D462A619FFC0042C314 /* PBXTargetDependency */,
 			);
-			name = TimeFlowsTests;
+			name = SimpleTimeFlowsTests;
 			packageProductDependencies = (
 				BBC624BB2A8FC3740096AA2B /* ViewInspector */,
 			);
 			productName = TimeFlowsTests;
-			productReference = BB073D442A619FFC0042C314 /* TimeFlowsTests.xctest */;
+			productReference = BB073D442A619FFC0042C314 /* SimpleTimeFlowsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -244,8 +244,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB073D322A619FFB0042C314 /* TimeFlows */,
-				BB073D432A619FFC0042C314 /* TimeFlowsTests */,
+				BB073D322A619FFB0042C314 /* SimpleTimeFlows */,
+				BB073D432A619FFC0042C314 /* SimpleTimeFlowsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -299,7 +299,7 @@
 /* Begin PBXTargetDependency section */
 		BB073D462A619FFC0042C314 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BB073D322A619FFB0042C314 /* TimeFlows */;
+			target = BB073D322A619FFB0042C314 /* SimpleTimeFlows */;
 			targetProxy = BB073D452A619FFC0042C314 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -445,7 +445,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.brehm.oliver.SimpleTimeFlows;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -483,7 +485,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.brehm.oliver.SimpleTimeFlows;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -548,7 +552,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB073D582A619FFC0042C314 /* Build configuration list for PBXNativeTarget "TimeFlows" */ = {
+		BB073D582A619FFC0042C314 /* Build configuration list for PBXNativeTarget "SimpleTimeFlows" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB073D592A619FFC0042C314 /* Debug */,
@@ -557,7 +561,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB073D5B2A619FFC0042C314 /* Build configuration list for PBXNativeTarget "TimeFlowsTests" */ = {
+		BB073D5B2A619FFC0042C314 /* Build configuration list for PBXNativeTarget "SimpleTimeFlowsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB073D5C2A619FFC0042C314 /* Debug */,
