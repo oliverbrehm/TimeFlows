@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct TimeFlowsApp: App {
+    private let timeFlowService = TimeFlowService()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .environmentObject(timeFlowService)
         }
     }
 }

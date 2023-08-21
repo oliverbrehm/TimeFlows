@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "csvdata",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/oliverbrehm/CSVData.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "f698524cbc2f524dbfbd9bd060921423f4523129"
+      }
+    },
+    {
+      "identity" : "viewinspector",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nalexn/ViewInspector",
+      "state" : {
+        "revision" : "f8a994374b9eff1d92046f3d759654f527495045",
+        "version" : "0.9.7"
+      }
+    }
+  ],
+  "version" : 2
+}
