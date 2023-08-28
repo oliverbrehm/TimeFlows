@@ -151,10 +151,10 @@ extension TimeFlowActionView {
 #if DEBUG
 struct TimeFlowActionView_Previews: PreviewProvider {
     static var previews: some View {
-        TimeFlowActionView(timeFlow: TimeFlow(name: "Time Flow", transitionSectonds: 0, items: [
+        TimeFlowActionView(timeFlow: TimeFlow(name: "Time Flow", items: [
             TimeItem(name: "Item 1", seconds: 5),
             TimeItem(name: "Item 2", seconds: 3),
-            TimeItem(name: "Item 3", seconds: 8)
+            TimeItem(name: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et", seconds: 8)
         ]))
     }
 }

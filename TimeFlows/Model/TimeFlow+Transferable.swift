@@ -15,15 +15,13 @@ enum TimeFlowCSVFormat: String, CSVFormat {
 
 extension TimeFlow: Transferable {
     static var transferRepresentation: some TransferRepresentation {
-        DataRepresentation(contentType: .commaSeparatedText) { timeFlow in
-            timeFlow.getCSVData()
-        } importing: { data in
-            TimeFlow(name: "", transitionSectonds: 0, items: [])
-        }
+        FileRepresentation(exportedContentType: .commaSeparatedText) { timeFlow in
+            let fileURL = FileManager.default.temporaryDirectory.appendingPathComponent(timeFlow.name).appendingPathExtension("csv")
+            try timeFlow.getCSVData().write(to: fileURL)
 
-        DataRepresentation(exportedContentType: .commaSeparatedText) { timeFlow in
-            timeFlow.getCSVData()
+            return SentTransferredFile(fileURL)
         }
+        .suggestedFileName("TimeFlow.csv")
     }
 
     func getCSVData() -> Data {

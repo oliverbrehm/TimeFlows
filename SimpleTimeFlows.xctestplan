@@ -18,6 +18,13 @@
         "identifier" : "BBE8E3A32A98EDE800F0D516",
         "name" : "SimpleTimeFlowsUITests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:TimeFlows.xcodeproj",
+        "identifier" : "BB9655992A9CD2C0003596FF",
+        "name" : "SimpleTimeFlowsTests"
+      }
     }
   ],
   "version" : 1
