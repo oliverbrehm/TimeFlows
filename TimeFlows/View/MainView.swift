@@ -7,58 +7,69 @@
 
 import SwiftUI
 
-struct MainView: View {
-    @EnvironmentObject var timeFlowService: TimeFlowService
-    @State var showAddFlow = false
-    @State var addFlowName = ""
+extension MainView {
+    @MainActor class ViewModel: ObservableObject {
+        var timeFlowService: TimeFlowService?
 
-    var body: some View {
-        NavigationStack {
-            List($timeFlowService.timeFlows, editActions: .delete) { $timeFlow in
-                NavigationLink {
-                    TimeFlowView(timeFlow: timeFlow)
-                } label: {
-                    Text(timeFlow.name)
-                }
+        @Published var showAddFlow = false
+        @Published var addFlowName = ""
 
-            }
-            .toolbar {
-                ToolbarItem(placement: .automatic) {
-                    Button(action: showAddFlowView) {
-                        Image(systemName: "plus")
-                    }
-                }
-            }
-            .sheet(isPresented: $showAddFlow) {
-                Form {
-                    Section("Name") {
-                        TextField("Name", text: $addFlowName)
-                    }
+        func showAddFlowView() {
+            showAddFlow = true
+        }
 
-                    Button("Add", action: addFlow)
-                }
-            }
-            .onAppear {
-                timeFlowService.synchronize()
-            }
-            .navigationTitle("TimeFlows")
+        func addFlow() {
+            guard !addFlowName.isEmpty else { return }
+
+            timeFlowService?.timeFlows.append(TimeFlow(name: addFlowName, transitionSectonds: 0, items: []))
+
+            showAddFlow = false
+            addFlowName = ""
         }
     }
 }
 
-// MARK: - Actions
-extension MainView {
-    private func showAddFlowView() {
-        showAddFlow = true
-    }
+struct MainView: View {
+    @EnvironmentObject private var timeFlowService: TimeFlowService
+    @StateObject private var viewModel = ViewModel()
 
-    private func addFlow() {
-        guard !addFlowName.isEmpty else { return }
+    var body: some View {
+        NavigationStack {
+            List {
+                ForEach($timeFlowService.timeFlows, editActions: .delete) { $timeFlow in
+                    NavigationLink {
+                        TimeFlowView(timeFlow: timeFlow)
+                    } label: {
+                        Text(timeFlow.name)
+                    }
+                }
 
-        timeFlowService.timeFlows.append(TimeFlow(name: addFlowName, transitionSectonds: 0, items: []))
+                if $timeFlowService.timeFlows.isEmpty {
+                    Text("Add a time flow to get started!")
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .automatic) {
+                    Button(action: { viewModel.showAddFlowView() }) {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
+            .sheet(isPresented: $viewModel.showAddFlow) {
+                Form {
+                    Section("Name") {
+                        TextField("Name", text: $viewModel.addFlowName)
+                    }
 
-        showAddFlow = false
-        addFlowName = ""
+                    Button("Add", action: { viewModel.addFlow() })
+                }
+            }
+            .onAppear {
+                timeFlowService.synchronize()
+                viewModel.timeFlowService = timeFlowService
+            }
+            .navigationTitle("TimeFlows")
+        }
     }
 }
 

@@ -14,6 +14,8 @@ struct TimeFlowView: View {
     // MARK: - State
     @ObservedObject var timeFlow: TimeFlow
 
+    @State private var showActionView = false
+
     // MARK: - Private functions
     private func addItem() {
         let item = TimeItem(name: "Item", seconds: 60)
@@ -53,6 +55,7 @@ extension TimeFlowView {
                                 TextField("Name", text: $timeFlow.name)
                             }
                         }
+                        .navigationTitle("Edit name")
                     } label: {
                         Text("Edit name")
                     }
@@ -62,8 +65,8 @@ extension TimeFlowView {
         .toolbar {
             if !timeFlow.items.isEmpty {
                 ToolbarItem(placement: .automatic) {
-                    NavigationLink {
-                        TimeFlowActionView(timeFlow: timeFlow)
+                    Button {
+                        showActionView = true
                     } label: {
                         Image(systemName: "play")
                     }
@@ -78,6 +81,9 @@ extension TimeFlowView {
             }
         }
         .navigationTitle(timeFlow.name)
+        .fullScreenCover(isPresented: $showActionView, content: {
+            TimeFlowActionView(timeFlow: timeFlow)
+        })
         .onAppear {
             timeFlow.objectWillChange.send()
             timeFlowService.synchronize()

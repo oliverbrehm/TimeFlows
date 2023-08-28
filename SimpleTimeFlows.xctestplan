@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "50CE3929-55DF-4148-BE64-213A9B513A78",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:TimeFlows.xcodeproj",
+        "identifier" : "BBE8E3A32A98EDE800F0D516",
+        "name" : "SimpleTimeFlowsUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -35,6 +35,7 @@ extension EditItemView {
                 }
             }
         }
+        .navigationTitle("Edit item")
         .onAppear {
             seconds = Int(item.seconds) - 1
         }

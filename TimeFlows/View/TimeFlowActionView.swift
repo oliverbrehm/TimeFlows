@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TimeFlowActionView: View {
+    // MARK: - Environment
+    @Environment(\.dismiss) private var dismiss
+
     // MARK: - State
     @State var currentItem = TimeItem(name: "", seconds: 0)
     @State var currentSeconds: UInt = 0
@@ -61,55 +64,62 @@ extension TimeFlowActionView {
 // MARK: - UI
 extension TimeFlowActionView {
     var body: some View {
-        VStack(spacing: 30) {
+        VStack(spacing: 20) {
             HStack {
+                controlView(image: Image(systemName: "xmark"), color: .red) {
+                    dismiss()
+                }
+
+                Spacer()
+
                 controlView(image: running ? Image(systemName: "pause.fill") : Image(systemName: "play.fill")) {
                     running.toggle()
                 }
 
                 Spacer()
 
-                VStack {
-                    Text(currentItem.name)
-                        .font(.system(size: 25, weight: .bold))
-                        .foregroundColor(.yellow)
-                    Text("\(currentSeconds)")
-                        .font(.system(size: 80, weight: .bold))
-                        .foregroundColor(.orange)
-                }
-                .padding(20)
-                .background(Color.blue)
-                .cornerRadius(20)
-
-                Spacer()
-
-                VStack(spacing: 20) {
-                    controlView(image: Image(systemName: "backward.fill"), action: previousItem)
-                    controlView(image: Image(systemName: "forward.fill"), action: nextItem)
-                }
+                controlView(image: Image(systemName: "backward.fill"), action: previousItem)
+                controlView(image: Image(systemName: "forward.fill"), action: nextItem)
             }
             .padding(20)
+
+            VStack {
+                Text(currentItem.name)
+                    .font(.system(size: 25, weight: .bold))
+                    .foregroundColor(.white)
+                Text("\(currentSeconds)")
+                    .font(.system(size: 80, weight: .bold))
+                    .foregroundColor(.orange)
+            }
+            .padding(10)
+            .frame(maxWidth: .infinity)
+            .background(Color.blue)
+            .cornerRadius(20)
+            .padding(.horizontal, 40)
 
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: 5) {
                     ForEach(timeFlow.items) { item in
+                        let isSelected = item == currentItem
+
                         HStack {
                             Text(item.name)
-                                .fontWeight(item == currentItem ? .bold : .regular)
+                                .foregroundColor(.white)
+                                .fontWeight(isSelected ? .bold : .regular)
 
                             Spacer()
 
                             Text("\(item.seconds) seconds")
+                                .foregroundColor(.white)
                         }
                         .padding(5)
-                        .background(Color.white)
+                        .background(Color.blue.opacity(isSelected ? 1 : 0.3))
                     }
 
                     Spacer()
                 }
             }
             .padding([.top, .bottom], 20)
-            .background(Color.gray.opacity(0.3))
 
             Spacer()
         }
@@ -124,14 +134,14 @@ extension TimeFlowActionView {
         }
     }
 
-    private func controlView(image: Image, action: @escaping () -> Void) -> some View {
+    private func controlView(image: Image, color: Color = Color.blue, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             image
                 .resizable()
                 .frame(width: 20, height: 20)
                 .foregroundColor(.white)
                 .padding(20)
-                .background(Color.blue)
+                .background(color)
                 .clipShape(Circle())
         }
     }

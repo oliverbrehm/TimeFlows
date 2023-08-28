@@ -26,8 +26,22 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      shouldAutocreateTestPlan = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "echo &quot;pre test!&quot;&#10;echo ${PRODUCT_BUNDLE_IDENTIFIER}&#10;xcrun simctl uninstall booted ${PRODUCT_BUNDLE_IDENTIFIER}&#10;">
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
+      <TestPlans>
+         <TestPlanReference
+            reference = "container:SimpleTimeFlows.xctestplan"
+            default = "YES">
+         </TestPlanReference>
+      </TestPlans>
       <Testables>
          <TestableReference
             skipped = "NO"
@@ -37,6 +51,17 @@
                BlueprintIdentifier = "BB073D432A619FFC0042C314"
                BuildableName = "SimpleTimeFlowsTests.xctest"
                BlueprintName = "SimpleTimeFlowsTests"
+               ReferencedContainer = "container:TimeFlows.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BBE8E3A32A98EDE800F0D516"
+               BuildableName = "SimpleTimeFlowsUITests.xctest"
+               BlueprintName = "SimpleTimeFlowsUITests"
                ReferencedContainer = "container:TimeFlows.xcodeproj">
             </BuildableReference>
          </TestableReference>
