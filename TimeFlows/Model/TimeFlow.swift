@@ -44,7 +44,7 @@ class TimeFlow: ObservableObject, Codable, Identifiable {
     }
 
     func addItem() {
-        let item = TimeItem(name: "Item", seconds: 60)
+        let item = TimeItem(name: "Item", seconds: 5)
         items.append(item)
     }
 }

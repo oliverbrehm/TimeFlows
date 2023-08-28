@@ -22,6 +22,8 @@
 		BB96559D2A9CD2C1003596FF /* MainViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96559C2A9CD2C0003596FF /* MainViewViewModelTests.swift */; };
 		BB9655A42A9CD6FD003596FF /* TimeFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9655A32A9CD6FD003596FF /* TimeFlowTests.swift */; };
 		BB9655A82A9CD8F5003596FF /* TimeFlowServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9655A72A9CD8F5003596FF /* TimeFlowServiceTests.swift */; };
+		BB9655AB2A9CDD9D003596FF /* TimeFlowActionView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9655A92A9CDD80003596FF /* TimeFlowActionView+ViewModel.swift */; };
+		BB9655AD2A9CEDE4003596FF /* TimeFlowActionViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9655AC2A9CEDE4003596FF /* TimeFlowActionViewViewModelTests.swift */; };
 		BBC083A52A7E3BB9009990F4 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC083A42A7E3BB9009990F4 /* EditItemView.swift */; };
 		BBE8E3A72A98EDE800F0D516 /* SimpleTimeFlowsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE8E3A62A98EDE800F0D516 /* SimpleTimeFlowsUITests.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +63,8 @@
 		BB96559C2A9CD2C0003596FF /* MainViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModelTests.swift; sourceTree = "<group>"; };
 		BB9655A32A9CD6FD003596FF /* TimeFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFlowTests.swift; sourceTree = "<group>"; };
 		BB9655A72A9CD8F5003596FF /* TimeFlowServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFlowServiceTests.swift; sourceTree = "<group>"; };
+		BB9655A92A9CDD80003596FF /* TimeFlowActionView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeFlowActionView+ViewModel.swift"; sourceTree = "<group>"; };
+		BB9655AC2A9CEDE4003596FF /* TimeFlowActionViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFlowActionViewViewModelTests.swift; sourceTree = "<group>"; };
 		BBC083A42A7E3BB9009990F4 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		BBE8E3A42A98EDE800F0D516 /* SimpleTimeFlowsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTimeFlowsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE8E3A62A98EDE800F0D516 /* SimpleTimeFlowsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTimeFlowsUITests.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 			children = (
 				BB073D6B2A61A60F0042C314 /* TimeFlowView.swift */,
 				BB073D6D2A61A81C0042C314 /* TimeFlowActionView.swift */,
+				BB9655A92A9CDD80003596FF /* TimeFlowActionView+ViewModel.swift */,
 			);
 			path = TimeFlow;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				BB96559C2A9CD2C0003596FF /* MainViewViewModelTests.swift */,
+				BB9655AC2A9CEDE4003596FF /* TimeFlowActionViewViewModelTests.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 			files = (
 				BB073D392A619FFB0042C314 /* MainView.swift in Sources */,
 				BB073D372A619FFB0042C314 /* TimeFlowsApp.swift in Sources */,
+				BB9655AB2A9CDD9D003596FF /* TimeFlowActionView+ViewModel.swift in Sources */,
 				BB9655912A9CCE3C003596FF /* MainView+ViewModel.swift in Sources */,
 				BB073D632A61A0510042C314 /* TimeFlow.swift in Sources */,
 				BB073D6C2A61A60F0042C314 /* TimeFlowView.swift in Sources */,
@@ -394,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB9655AD2A9CEDE4003596FF /* TimeFlowActionViewViewModelTests.swift in Sources */,
 				BB9655A42A9CD6FD003596FF /* TimeFlowTests.swift in Sources */,
 				BB9655A82A9CD8F5003596FF /* TimeFlowServiceTests.swift in Sources */,
 				BB96559D2A9CD2C1003596FF /* MainViewViewModelTests.swift in Sources */,

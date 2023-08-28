@@ -3,4 +3,118 @@
    uuid = "9D46D2D5-9199-4BA0-BC88-13526690F33C"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DDBB0FCD-3E66-49A7-9F5D-7017CE421007"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TimeFlows/View/TimeFlow/TimeFlowActionView+ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "onAppear()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DDBB0FCD-3E66-49A7-9F5D-7017CE421007 - 93e563de0aeff38"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in closure #1 @Sendable (__C.NSTimer) -&gt; () in SimpleTimeFlows.TimeFlowActionView.ViewModel.onAppear() -&gt; ()"
+                  moduleName = "SimpleTimeFlows"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oliverbrehm/private/TimeFlows/TimeFlows/View/TimeFlow/TimeFlowActionView+ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "DDBB0FCD-3E66-49A7-9F5D-7017CE421007 - 93e563de0aeffd9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in closure #1 @Sendable (__C.NSTimer) -&gt; () in SimpleTimeFlows.TimeFlowActionView.ViewModel.onAppear() -&gt; ()"
+                  moduleName = "SimpleTimeFlows"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oliverbrehm/private/TimeFlows/TimeFlows/View/TimeFlow/TimeFlowActionView+ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4745B27D-1CF1-4250-8D64-B7AD41B62715"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TimeFlows/View/TimeFlow/TimeFlowActionView+ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "onAppear()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4745B27D-1CF1-4250-8D64-B7AD41B62715 - 7a5e295c15396ed6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (__C.NSTimer) -&gt; () in SimpleTimeFlows.TimeFlowActionView.ViewModel.onAppear() -&gt; ()"
+                  moduleName = "SimpleTimeFlows"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oliverbrehm/private/TimeFlows/TimeFlows/View/TimeFlow/TimeFlowActionView+ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  uuid = "4745B27D-1CF1-4250-8D64-B7AD41B62715 - 93e563de0aefff6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in closure #1 @Sendable (__C.NSTimer) -&gt; () in SimpleTimeFlows.TimeFlowActionView.ViewModel.onAppear() -&gt; ()"
+                  moduleName = "SimpleTimeFlows"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oliverbrehm/private/TimeFlows/TimeFlows/View/TimeFlow/TimeFlowActionView+ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D47AF780-D888-4369-8E2C-79349FD77056"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TimeFlows/View/TimeFlow/TimeFlowActionView+ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "onAppear()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

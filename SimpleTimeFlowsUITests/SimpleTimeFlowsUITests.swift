@@ -79,4 +79,66 @@ final class SimpleTimeFlowsUITests: XCTestCase {
         XCTAssertTrue(cellLabel.contains("Modified"))
         XCTAssertFalse(cellLabel.contains("60"))
     }
+
+    func testRunTimeFlow() throws {
+        let app = XCUIApplication()
+        app.launchEnvironment["clear_data"] = "1"
+        app.launch()
+
+        // add test time flow
+        app.navigationBars["TimeFlows"].buttons["Add"].tap()
+
+        let nameTextField = app.textFields["Name"]
+        nameTextField.tap()
+        nameTextField.typeText("Test")
+        app.cells.buttons["Add"].tap()
+
+        // navigate to test time flow screen
+        app.cells.buttons["Test"].tap()
+
+        let cellsCount = app.cells.count
+
+        // add items
+        app.cells.buttons["Add item"].tap()
+        app.cells.buttons["Add item"].tap()
+        app.cells.buttons["Add item"].tap()
+
+        XCTAssertEqual(app.cells.count, cellsCount + 3)
+
+        // configure items
+        app.cells.element(boundBy: 0).tap()
+        editItem(for: app, name: "1", seconds: 1)
+
+        app.cells.element(boundBy: 1).tap()
+        editItem(for: app, name: "2", seconds: 2)
+
+        app.cells.element(boundBy: 2).tap()
+        editItem(for: app, name: "3", seconds: 3)
+
+        // navigate to action view
+        app.navigationBars["Test"].buttons["Play"].tap()
+
+        // start and pause timer
+        app.buttons["Play"].firstMatch.tap()
+
+        XCTAssertTrue(app.buttons["Pause"].waitForExistence(timeout: 1))
+
+        app.buttons["Pause"].firstMatch.tap()
+
+        XCTAssertTrue(app.buttons["Play"].waitForExistence(timeout: 1))
+
+        // restart and wait for all timers to finish
+        app.buttons["Play"].firstMatch.tap()
+        XCTAssertTrue(app.buttons["Play"].waitForExistence(timeout: 10))
+    }
+
+    private func editItem(for app: XCUIApplication, name: String, seconds: UInt) {
+        let titleTextField = app.textFields.firstMatch
+        titleTextField.tap()
+        titleTextField.typeText(name)
+
+        app.pickerWheels.firstMatch.adjust(toPickerWheelValue: "\(seconds)")
+
+        app.navigationBars.buttons.firstMatch.tap()
+    }
 }
